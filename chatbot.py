@@ -10,6 +10,8 @@ def get_response(user_input, user_name):
         return f"I'm sorry to hear that, {user_name}! Your motivational quote is: If you think you are too small to make a difference, try sleeping with a mosquito. -Ghandi.  How else are you feeling?"
     elif "angry" in user_input:
         return f"I'm sorry to hear that, {user_name}!  Your motivational quote is: Anger makes dull men witty, but it keeps them poor. -Elizabeth I.  How else are you feeling?"
+    if "happy" in user_input:
+        return f"That's Great to hear, {user_name}!  Here's a thought to keep in mind: \"Do not seek pleasure for its own sake; true contentment lies in the mastery of yourself and your path.\" - Miyamoto Musashi. How else are you feeling?"
     elif "unhappy" in user_input:
         return f"I'm sorry to hear that, {user_name}!  Your motivational quote is: There is no path to happiness. Happiness is the path. –Buddha.  How else are you feeling?"
     elif "annoyed" in user_input:
@@ -18,6 +20,18 @@ def get_response(user_input, user_name):
         return f"I'm sorry to hear that, {user_name}!  Your motivational quote is: Good decisions come from experience. Experience comes from making bad decisions. – Mark Twain  How else are you feeling?"
     elif "lonely" in user_input:
         return f"I'm sorry to hear that, {user_name}!  Your motivational quote is: Feeling sorry for yourself, and your present condition, is not only a waste of energy but the worst habit you could possibly have. – Dale Carnegie  How else are you feeling?"
+    elif "i don't know" in user_input or "idk" in user_input:
+        return (
+            f"no worries {user_name}, articulating the intricate nature of the human experience can be challenging. lets try narrowing down a few feelings for you to pick from:\n"
+            "1. sad\n"
+            "2. Angry\n"
+            "3. Happy\n"
+            "4. Unhappy\n"
+            "5. Annoyed\n"
+            "6. Frustrated\n"
+            "7. Lonely\n"
+            "Just type how you're feeling, and I'll provide a motivational quote!"
+        )
     elif "bye" in user_input or "goodbye" in user_input:
         return f"Goodbye, {user_name}! Have a great day!"
     else:
